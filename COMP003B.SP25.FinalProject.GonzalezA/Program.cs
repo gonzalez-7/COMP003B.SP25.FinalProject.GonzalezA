@@ -27,7 +27,12 @@ namespace COMP003B.SP25.FinalProject.GonzalezA
             }
 
             app.UseHttpsRedirection();
-            app.UseRouting();
+            app.UseStaticFiles();
+
+			app.UseMiddleware<COMP003B.SP25.FinalProject.GonzalezA.Middleware.RequestTimingMiddleware>();
+
+
+			app.UseRouting();
 
             app.UseAuthorization();
 
