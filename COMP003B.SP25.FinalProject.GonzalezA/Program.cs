@@ -1,3 +1,6 @@
+using COMP003B.SP25.FinalProject.GonzalezA.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace COMP003B.SP25.FinalProject.GonzalezA
 {
     public class Program
@@ -9,7 +12,11 @@ namespace COMP003B.SP25.FinalProject.GonzalezA
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            var app = builder.Build();
+			// Database Context
+			builder.Services.AddDbContext<ApplicationDbContext>(options =>
+	                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
