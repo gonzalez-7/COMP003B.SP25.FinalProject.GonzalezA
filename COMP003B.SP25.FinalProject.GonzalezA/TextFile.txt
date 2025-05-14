@@ -1,0 +1,28 @@
+﻿# COMP003B Final Project – Car Service Booking App
+
+## Author
+Antonio Gonzalez
+
+## Overview
+This project is a full-stack ASP.NET Core MVC and Web API application that allows users to manage car service bookings. It demonstrates full CRUD operations, a relational database with EF Core, custom middleware, Razor views, partials, and routing features.
+
+## Features
+- Manage customers, cars, bookings, service types, and services
+- Full CRUD via MVC controllers and views
+- RESTful Web API for Customers
+- Two reusable partial views (navigation menu and service card)
+- Custom middleware logs request method, path, and execution time
+
+## Tech Stack
+- ASP.NET Core MVC (.NET 9)
+- Entity Framework Core
+- SQL Server LocalDB
+- Razor Pages
+- Bootstrap 5 (optional styling)
+- Custom Middleware
+- Visual Studio 2022
+
+## Setup Instructions
+1. Clone the repo or open the solution in Visual Studio 2022.
+2. Set up `secrets.json` with your connection string.
+3. Run the following in Package Manager Console:
